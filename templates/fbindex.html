@@ -37,7 +37,12 @@
             <h1>Facebook Friends</h1>
             <h3>Fight Depression! </h3>
             <br>
-            <a href="friends.html" class="btn btn-dark btn-lg">Login</a>
+            <!--<a href="friends.html" class="btn btn-dark btn-lg">Login</a>-->
+            {% if not session.logged_in %}
+                <li><a href="/facebook_login">Login or Signup</a></li>
+            {% else %}
+    <li><a href="/logout">Logout</a></li>
+    {% endif %}
         </div>
     </header>
 
